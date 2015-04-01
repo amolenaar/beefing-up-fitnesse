@@ -1,0 +1,68 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+}
+
+configurations {
+    fitnesse
+    fitnessePlugin
+}
+
+dependencies {
+    testCompile 'org.jbehave:jbehave-core:4.0-beta-10'
+
+    fitnesse 'org.fitnesse:fitnesse:20150226'
+    fitnessePlugin 'org.fitnesse.jbehave:fitnesse-jbehave:0.1-SNAPSHOT'
+}
+
+task("writeFitNesseClasspath", type: WriteFitNesseClasspath) {
+    classpath = project.configurations.fitnesse + project.configurations.testCompile
+
+    pagePath = project.file("FitNesseRoot/GradleClasspath")
+}
+
+task("run", type: JavaExec) {
+    dependsOn writeFitNesseClasspath
+    dependsOn compileJava
+    dependsOn compileTestJava
+    classpath configurations.fitnesse + configurations.fitnessePlugin
+    main "fitnesseMain.FitNesseMain"
+    args "-p", "8000", "-e", "0"
+}
+
+
+/// === Custom Tasks
+
+class WriteFitNesseClasspath extends DefaultTask {
+    @Input
+    def classpath
+
+    @OutputDirectory
+    File pagePath
+
+    @TaskAction
+    def generatePage() {
+        def contentTxt = project.file("${pagePath}/content.txt")
+        contentTxt.createNewFile()
+        contentTxt.withWriter { writer ->
+            writer.writeLine("!path ${project.sourceSets.main.output.classesDir}")
+            writer.writeLine("!path ${project.sourceSets.test.output.classesDir}")
+            writer.writeLine("!path src/main/resources")
+            writer.writeLine("!path src/test/resources")
+            classpath.each { d ->
+                writer.writeLine("!path $d")
+            }
+        }
+    }
+}
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
+
