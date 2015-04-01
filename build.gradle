@@ -35,6 +35,15 @@ task("run", type: JavaExec) {
     args "-p", "8000", "-e", "0"
 }
 
+task ("intTest", type: JavaExec) {
+    dependsOn writeFitNesseClasspath
+    dependsOn compileJava
+    dependsOn compileTestJava
+    classpath configurations.fitnesse + configurations.fitnessePlugin
+    main "fitnesseMain.FitNesseMain"
+    args "-p", "8000", "-o", "-c", "StoryFiles?suite&format=text"
+}
+
 
 /// === Custom Tasks
 
