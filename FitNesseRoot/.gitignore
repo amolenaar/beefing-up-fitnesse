@@ -1,0 +1,14 @@
+properties
+updateList
+updateDoNotCopyOverList
+FitNesse/*
+PageFooter/*
+PageHeader/*
+TemplateLibrary/*
+GradleClasspath/*
+files/testResults/*
+files/testProgress/*
+.svn
+.DS_Store
+desktop.ini
+*.zip

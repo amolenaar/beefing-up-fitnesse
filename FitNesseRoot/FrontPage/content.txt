@@ -1,0 +1,8 @@
+!1 Welcome to [[FitNesse][FitNesse.FitNesse]]!
+!3 ''The fully integrated stand-alone acceptance testing framework and wiki.''
+
+You probably ended up on this page because you want to learn more about the JbehaveTestSystem.
+
+As a treat, you can access your StoryFiles directly embedded in the wiki or through a SymLinked reference.
+
+'''NB.''' The class path is defined on the [[root][/root]] page.

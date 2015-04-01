@@ -1,0 +1,6 @@
+!include -c .GradleClassPath
+
+!define TEST_SYSTEM {jbehave}
+
+
+!contents
