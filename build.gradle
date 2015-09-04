@@ -1,5 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'maven'
+apply plugin: 'idea'
 
 repositories {
     mavenCentral()
@@ -10,14 +11,13 @@ repositories {
 
 configurations {
     fitnesse
-    fitnessePlugin
 }
 
 dependencies {
-    testCompile 'org.jbehave:jbehave-core:4.0-beta-10'
+    testCompile 'org.jbehave:jbehave-core:4.0.3'
+    testCompile 'org.fitnesse.jbehave:fitnesse-jbehave:0.2'
 
-    fitnesse 'org.fitnesse:fitnesse:20150226'
-    fitnessePlugin 'org.fitnesse.jbehave:fitnesse-jbehave:0.1-SNAPSHOT'
+    fitnesse 'org.fitnesse:fitnesse:20150814'
 }
 
 task("writeFitNesseClasspath", type: WriteFitNesseClasspath) {
@@ -30,7 +30,7 @@ task("run", type: JavaExec) {
     dependsOn writeFitNesseClasspath
     dependsOn compileJava
     dependsOn compileTestJava
-    classpath configurations.fitnesse + configurations.fitnessePlugin
+    classpath configurations.fitnesse + configurations.testCompile
     main "fitnesseMain.FitNesseMain"
     args "-p", "8000", "-e", "0"
 }
@@ -39,7 +39,7 @@ task ("intTest", type: JavaExec) {
     dependsOn writeFitNesseClasspath
     dependsOn compileJava
     dependsOn compileTestJava
-    classpath configurations.fitnesse + configurations.fitnessePlugin
+    classpath configurations.fitnesse + configurations.testCompile
     main "fitnesseMain.FitNesseMain"
     args "-p", "8000", "-o", "-c", "StoryFiles?suite&format=text"
 }
