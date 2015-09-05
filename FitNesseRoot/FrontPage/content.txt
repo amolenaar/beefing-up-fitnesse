@@ -4,6 +4,5 @@
 
 The awesome [[Calculator][Calculator]]!
 
-As a treat, you can access your StoryFiles directly embedded in the wiki or through a SymLinked reference.
 
 '''NB.''' The class path is defined on the [[root][/root]] page.

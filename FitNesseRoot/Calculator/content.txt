@@ -1,6 +1,7 @@
 !define TEST_SYSTEM {slim}
 
- * deal with specs
+ 
+This wiki contains the specs of our Awesome Calculator.
 
 
 !contents -h
