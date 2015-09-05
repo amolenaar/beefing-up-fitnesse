@@ -1,4 +1,4 @@
-!steps org.fitnesse.jbehave.ExampleSteps
+!steps calculator.steps.SquareSteps
 
 Example symlinked scenarios for test system ${TEST_SYSTEM}
 

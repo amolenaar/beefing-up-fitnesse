@@ -1,0 +1,12 @@
+!define TEST_SYSTEM {slim}
+
+ * deal with specs
+
+| import |
+| calculator.fixtures |
+
+| calculate division |
+| numerator | denominator | quotient? |
+| 4         | 2           | 2         |
+| 1         | 3           | 1/3       |
+| 3         | 12          | 1/4       |

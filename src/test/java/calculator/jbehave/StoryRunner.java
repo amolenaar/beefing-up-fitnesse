@@ -1,5 +1,6 @@
-package org.fitnesse.jbehave;
+package calculator.jbehave;
 
+import calculator.steps.SquareSteps;
 import org.jbehave.core.junit.JUnitStories;
 
 import java.util.Arrays;
@@ -8,7 +9,7 @@ import java.util.List;
 public class StoryRunner extends JUnitStories {
 
     public StoryRunner() {
-        this.configuredEmbedder().candidateSteps().add(new ExampleSteps());
+        this.configuredEmbedder().candidateSteps().add(new SquareSteps());
     }
 
     @Override

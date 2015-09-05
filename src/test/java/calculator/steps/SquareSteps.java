@@ -1,9 +1,9 @@
-package org.fitnesse.jbehave;
+package calculator.steps;
 
 import org.jbehave.core.annotations.*;
 import org.jbehave.core.steps.Steps;
 
-public class ExampleSteps extends Steps {
+public class SquareSteps extends Steps {
     int x;
 
     @Given("a variable x with value $value")
