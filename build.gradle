@@ -13,6 +13,14 @@ configurations {
     fitnesse
 }
 
+sourceSets {
+    test {
+        java {
+            srcDirs += 'stories'
+        }
+    }
+}
+
 dependencies {
     testCompile 'org.jbehave:jbehave-core:4.0.3'
     testCompile 'org.fitnesse.jbehave:fitnesse-jbehave:0.2'
