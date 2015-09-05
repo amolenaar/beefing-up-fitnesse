@@ -15,8 +15,8 @@ configurations {
 
 sourceSets {
     test {
-        java {
-            srcDirs += 'stories'
+        resources {
+            srcDir 'stories'
         }
     }
 }
