@@ -6,3 +6,13 @@ storyDurations.props
 *.iml
 *.iws
 *.ipr
+FitNesseRoot/GradleClasspath
+FitNesseRoot/PageHeader
+FitNesseRoot/PageFooter
+FitNesseRoot/RecentChanges
+FitNesseRoot/TemplateLibrary
+properties
+updateDoNotCopyOverList
+updateList
+FitNesseRoot/files/testResults
+FitNesseRoot/FitNesse

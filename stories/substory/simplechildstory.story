@@ -1,5 +1,3 @@
-!steps calculator.steps.SquareSteps
-
 Example symlinked scenarios for test system ${TEST_SYSTEM}
 
 Scenario: 2 squared
