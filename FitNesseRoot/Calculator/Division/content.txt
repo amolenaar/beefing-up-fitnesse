@@ -1,5 +1,11 @@
+
+!**> tech cruft set up
+
 | import |
 | calculator.fixtures |
+
+*!
+
 
 | calculate division |
 | numerator | denominator | quotient? |
