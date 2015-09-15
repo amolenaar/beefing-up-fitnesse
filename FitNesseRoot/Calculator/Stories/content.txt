@@ -1,5 +1,0 @@
-!define TEST_SYSTEM {jbehave}
-
-!steps calculator.steps.MultiplySteps
-
-!contents
