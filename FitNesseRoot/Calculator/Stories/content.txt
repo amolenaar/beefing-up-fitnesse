@@ -1,0 +1,8 @@
+!1 Multiplication
+
+!**< jbehave
+!define TEST_SYSTEM {jbehave}
+!steps calculator.steps.MultiplySteps
+
+*!
+!contents -R2 -g -p -f -h

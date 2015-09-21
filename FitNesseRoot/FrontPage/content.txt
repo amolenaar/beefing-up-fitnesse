@@ -1,8 +1,10 @@
-!1 Welcome to [[FitNesse][FitNesse.FitNesse]]!
-!3 ''The fully integrated stand-alone acceptance testing framework and wiki.''
+!-<div style="margin: auto; border-radius: 4px; border: 1px solid #aaa; background-color: #eee; padding: 2em">-!
+!1 The [[Awesome Calculator][Calculator]]
+!-<p>We provide the best calculator for students and professionals.</p>
 
+<p><a  class="btn btn-primary btn-lg" href="Calculator">Jump to the specs</a></p>
+</div>-!
 
-The awesome [[Calculator][Calculator]]!
 
 
 '''NB.''' The class path is defined on the [[root][/root]] page.

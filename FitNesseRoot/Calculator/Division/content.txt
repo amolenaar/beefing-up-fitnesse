@@ -1,5 +1,10 @@
+In the Awesome Calculator it is possible to divide numbers. The result is not represented as a rational number (e.g. 1/2 = 0.5), but should remain a fraction.
 
-4 / 2 = 2
-1 / 3 = 1/3
-3 / 12 = 1/4
+Here are some examples defined of how such calculation should work (''numerator'' / ''denominator'' = ''result''):
+
+| Calculate Division |
+| numerator | denominator | result? |
+| 4 | 2 | 2 |
+| 1 | 3 | 1/3 |
+| 3 | 12 | 1/4 |
 
