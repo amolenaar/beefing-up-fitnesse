@@ -3,8 +3,7 @@ package calculator;
 public class Calculator {
 
     public static String divide(int n, int d) {
-        int c = 1;
-//        int c = gcd(n, d);
+        int c = gcd(n, d);
 
         if (c == d) {
             return Long.toString(n / d);
