@@ -2,9 +2,9 @@ In the Awesome Calculator it is possible to divide numbers. The result is not re
 
 Here are some examples defined of how such calculation should work (''numerator'' / ''denominator'' = ''result''):
 
-| Calculate Division |
-| numerator | denominator | result? |
-| 4 | 2 | 2 |
-| 1 | 3 | 1/3 |
-| 3 | 12 | 1/4 |
-
+|Calculate Division           |
+|numerator|denominator|result?|
+|4        |2          |2      |
+|1        |3          |1/3    |
+|3        |12         |1/4    |
+`
